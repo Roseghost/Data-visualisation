@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tesla Stocks from 2013 till 2017"> 
+    <title>Tesla Stocks</title>
+    <link rel="stylesheet" href="tesla-stock.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+
+</head>
+<body>
+    <img class="logo" src="Tesla_logo_silver.png">
+    <div class="chart-position" style="height:1200px;width:800px;">
+     <canvas id="lineChart"> </canvas>
+    </div>
+        <script>
+            var ctx = document.getElementById('lineChart').getContext('2d');
+            var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['2013 ', '2014', '2015', '2016', '2017'],
+                datasets: [{
+                    label: 'Tesla Stocks',
+                    data: [39.24, 149.56, 219.31, 240.01, 213.69],
+                    backgroundColor: [
+                        'rgba(102, 102, 102, 0.4)',
+                        'rgba(102, 102, 102, 0.4)',
+                        'rgba(102, 102, 102, 0.4)',
+                        'rgba(102, 102, 102, 0.4)',
+                        'rgba(102, 102, 102, 0.4)',
+                        'rgba(102, 102, 102, 0.4)'
+                    ],
+                    borderColor: [
+                        'rgba(204, 0, 0, 1)',
+                        'rgba(204, 0, 0, 1)',
+                        'rgba(204, 0, 0, 1)',
+                        'rgba(204, 0, 0, 1)',
+                        'rgba(204, 0, 0, 1)',
+                        'rgba(204, 0, 0, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    xAxes: [{
+                        scaleLabel: {
+                          display: true,
+                            labelString: 'Year' }}],
+
+                    yAxes: [{
+                        scaleLabel: {
+                          display: true,
+                            labelString: 'Worth stock' },                            
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+    });
+        </script>
+    
+<!-- Based upon Chart.js-->
+</body>
+</html>
