@@ -1,0 +1,14 @@
+@media only screen and (max-width: 1000px){
+    .default-header{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1001px){
+    .mobile-header{
+        display: none;
+    }
+    .default-header{
+        display: initial;
+    }
+}

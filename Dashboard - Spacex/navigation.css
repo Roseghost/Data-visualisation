@@ -20,7 +20,12 @@ header{
     padding: 20px;
     background: transparent;
 }
+.logo-top img{
+    width: 800px;
+    padding: 20px;
+    background: transparent;
 
+} 
 .logo{
 
 }
