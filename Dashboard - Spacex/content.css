@@ -2,10 +2,18 @@
   font-family: fontMonda;
 }
 
+a{
+  text-decoration: none;
+}
 
 @font-face{
   font-family: fontMonda;
   src: url("media/Monda-Regular.ttf");
+}
+@font-face{
+  font-family: fontMonda;
+  src: url("media/Monda-Bold.ttf");
+  font-weight:bold;
 }
 
 body{
@@ -22,5 +30,13 @@ main {
 
 footer{
   display:flex;
+  background-color: #F8F9F9;
+  width: 100%;
+  margin-top: 5px;
   height: 5vh;
+}
+
+footer h1{
+  margin: auto;
+  color: black;
 }

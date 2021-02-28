@@ -123,7 +123,7 @@ main{
 
 }
 
-@media only screen and (min-width: 1001px) { 
+@media only screen and (min-width: 701px) { 
 
   .display-m {
     display: none;
@@ -137,15 +137,17 @@ main{
   }
 
   .hide-m a{
-    color: black;
-  }
+    color: #1f2833;
+    font-weight:bold;
+  } 
 
   .logo{
     background-image: url("media/SpaceX-Logo.svg");
     background-repeat: no-repeat;
     height: 100px;
     margin: 5px;
-    margin-left: 25%;
+    margin-left: 23.5%;
+    margin-bottom: 20px;
   }
 
   header {
@@ -163,10 +165,15 @@ main{
   }
 
   main {
-    flex-basis: 76%;
+    flex-basis: 73%;
     flex-direction: row;
     margin-top: 20px;
   }
+
+  footer{
+    margin-top: 20px;
+  }
+
 
 /*  Dashboard content */ 
 
@@ -222,10 +229,28 @@ main{
   } 
   .dash-food{
     margin: 1%;
-    width: 48%;
+    width: 28%;
   } 
   .dash-speedpast{
     margin: 1%;
-    width: 48%;
+    width: 68%;
   } 
+}
+
+@media only screen and (min-width: 1401px){
+
+ body{
+  padding: 0px 100px;
+  min-width: none;
+  width: 1400px;
+ } 
+ main{
+   flex-basis:76%;
+ }
+
+ footer{
+   margin-left:  20px;
+   margin-right: 20px;
+   border-radius: 5px 5px 0px 0px;
+ }
 }
