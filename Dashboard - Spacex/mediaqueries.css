@@ -1,14 +1,21 @@
-@media only screen and (max-width: 1000px){
-    .default-header{
-        display: none;
-    }
-}
+@media only screen and (min-width: 1001px) {
+  .display-m {
+    display: none;
+  }
 
-@media only screen and (min-width: 1001px){
-    .mobile-header{
-        display: none;
-    }
-    .default-header{
-        display: initial;
-    }
+  .hide-m {
+    display: inherit;
+  }
+
+  header {
+    justify-content: center;
+  }
+
+  nav {
+    flex-basis: 25%;
+  }
+
+  main {
+    flex-basis: 75%;
+  }
 }
