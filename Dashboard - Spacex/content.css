@@ -1,3 +1,26 @@
+*{
+  font-family: fontMonda;
+}
+
+
+@font-face{
+  font-family: fontMonda;
+  src: url("media/Monda-Regular.ttf");
+}
+
+body{
+  margin:0;
+  padding:0;
+  min-width:fit-content;
+}
+
 main {
-  background-color: red;
+
+  display:flex;
+  width: 100%;
+}
+
+footer{
+  display:flex;
+  height: 5vh;
 }
