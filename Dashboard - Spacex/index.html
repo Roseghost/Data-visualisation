@@ -9,6 +9,59 @@
     <link rel="stylesheet" href="navigation.css" />
     <link rel="stylesheet" href="content.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+
+    <script>
+      var ctx = document.getElementById('lineChart').getContext('2d');
+      var myChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+          labels: ['2013 ', '2014', '2015', '2016', '2017'],
+          datasets: [{
+              label: 'Tesla Stocks',
+              data: [39.24, 149.56, 219.31, 240.01, 213.69],
+              backgroundColor: [
+                  'rgba(102, 102, 102, 0.4)',
+                  'rgba(102, 102, 102, 0.4)',
+                  'rgba(102, 102, 102, 0.4)',
+                  'rgba(102, 102, 102, 0.4)',
+                  'rgba(102, 102, 102, 0.4)',
+                  'rgba(102, 102, 102, 0.4)'
+              ],
+              borderColor: [
+                  'rgba(204, 0, 0, 1)',
+                  'rgba(204, 0, 0, 1)',
+                  'rgba(204, 0, 0, 1)',
+                  'rgba(204, 0, 0, 1)',
+                  'rgba(204, 0, 0, 1)',
+                  'rgba(204, 0, 0, 1)'
+              ],
+              borderWidth: 1
+          }]
+      },
+      options: {
+          scales: {
+              xAxes: [{
+                  scaleLabel: {
+                    display: true,
+                      labelString: 'Year' }}],
+
+              yAxes: [{
+                  scaleLabel: {
+                    display: true,
+                      labelString: 'Worth stock' },                            
+                  ticks: {
+                      beginAtZero: true
+                  }
+              }]
+          }
+      }
+});
+  </script>
+
+
+
+
   </head>
   <body>
     <header>
@@ -37,7 +90,8 @@
 
     <main>
       <div class="dash-progress">
-        <h1> Line chart</h1>
+        <canvas id="lineChart"> </canvas>
+        
       </div>
       <div class="dash-fuel">
         <h1> Staafdiagram</h1>
