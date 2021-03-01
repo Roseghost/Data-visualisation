@@ -41,6 +41,12 @@ footer h1{
   color: black;
 }
 
+
+
+.progressChart{
+  width:100%;
+}
+
 .chart-position{
   margin:auto;
 }

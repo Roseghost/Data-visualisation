@@ -13,9 +13,9 @@ main{
   text-align: center;
   margin: auto;  
   margin-top: 10px;
-  padding: 10%;
   background-color: #F8F9F9;
   border-radius: 5px;
+  padding: 5px;
 }  
 .dash-fuel{
   width: 80%;
@@ -164,6 +164,11 @@ main{
     height: 50%;
   }
 
+  nav a {
+    text-align: center;
+    padding: 20px;
+  }
+
   main {
     flex-basis: 73%;
     flex-direction: row;
@@ -186,7 +191,6 @@ main{
 }
 
   .dash-progress{
-    margin: 1%;
     width: 68%;
 
   }  
