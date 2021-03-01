@@ -43,10 +43,24 @@ footer h1{
 
 
 
-.progressChart{
+#progressChart, #waterChart{
   width:100%;
+  height:100%;
+  flex:1;
 }
+
+
 
 .chart-position{
   margin:auto;
+}
+
+canvas{
+  display:flex !important;
+  width:100% !important;
+}
+
+.dash-fuel img{
+  height:70%
+  
 }

@@ -22,8 +22,8 @@ main{
   text-align: center;
   margin: auto;  
   margin-top: 10px;
-  padding: 10%;
   background-color: #F8F9F9;
+  padding: 5px;
   border-radius: 5px;
 } 
 .dash-speed{
@@ -50,7 +50,6 @@ main{
   text-align: center;
   margin: auto;  
   margin-top: 10px;
-  padding: 10%;
   background-color: #F8F9F9;
   border-radius: 5px;
 
@@ -192,12 +191,14 @@ main{
 
   .dash-progress{
     width: 68%;
+    height:20%;
 
   }  
 
   .dash-fuel{
     margin: 1%;
     width: 28%;
+    height:20%;
   } 
 
   .dash-speed{

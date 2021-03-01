@@ -43,7 +43,7 @@
         
       </div>
       <div class="dash-fuel">
-        <h1> Staafdiagram</h1>
+        <img src="media/Rocket.svg">
       </div>
       <div class="flex-row">
         <div class="dash-speed">
@@ -54,7 +54,7 @@
         </div>
       </div>
       <div class="dash-water">
-        <h1>  Pie chart multiple layer</h1>
+        <canvas id="waterChart" style="height:80%;"> </canvas>
       </div>
       <div class="dash-thermo">
         <h1>  Pie chart multiple layer</h1>
@@ -84,8 +84,8 @@
 
     <!--progressChart-->
     <script>
-      var ctx = document.getElementById('progressChart').getContext('2d');
-      var myChart = new Chart(ctx, {
+      var progress = document.getElementById('progressChart').getContext('2d');
+      var myChart = new Chart(progress, {
       type: 'line',
       data: {
           labels: ['1 ', '2', '3', '4', '5', '6','7'],
@@ -154,6 +154,37 @@
 });
   </script>
 <!-- end progressChart-->
+<script>
+
+
+
+var doughnutChart = document.getElementById("waterChart").getContext("2d");
+
+var data = {
+  datasets: [
+    {
+      data: [10, 20, 30],
+      backgroundColor: [
+                  'rgba(30, 139, 195, 1)',
+                  'rgba(30, 139, 195, 1)',
+                  'rgba(102, 102, 102, 0.4)'
+              ],
+    },
+  ],
+
+  // These labels appear in the legend and in the tooltips when hovering different arcs
+  labels: [
+        'Gebruikt',
+        'Beschikbaar',
+        'Reserve'
+    ]
+};
+
+var myPieChart = new Chart(doughnutChart, {
+  type: "pie",
+  data: data,
+});
+</script>
 
   </body>
 </html>
