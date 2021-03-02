@@ -50,12 +50,6 @@ nav a:hover {
   color: grey;
 }
 
-nav a:first-child {
-  border-top: 4px white solid;
-}
-nav a:last-child {
-  border-bottom: 4px white solid;
-}
 
 
 .menu-btn {

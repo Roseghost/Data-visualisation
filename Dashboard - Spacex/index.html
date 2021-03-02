@@ -10,13 +10,10 @@
     <link rel="stylesheet" href="content.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
-
   </head>
   <body>
     <header>
-      <div class="logo">
-
-      </div>
+      <div class="logo"></div>
 
       <div class="menu-btn display-m">
         <div class="menu-btn-burger"></div>
@@ -24,167 +21,84 @@
     </header>
 
     <nav class="nav-menu hide-m">
-      <a href="#1">Progress</a>
-      <a href="#2">Fuel Usage</a>
-      <a href="#3">Current Speed</a>
-      <a href="#4">Distance</a>
-      <a href="#1">Watertank</a>
-      <a href="#2">Thermometer</a>
-      <a href="#3">Oxygen Tank</a>
-      <a href="#4">Sleep Cabine's</a>
-      <a href="#2">Toilet tank</a>
-      <a href="#3">Food Supply</a>
-      <a href="#4">Speed Chart</a>
+      <a href="#dash-progress">Progress</a>
+      <a href="#dash-fuel">Fuel Usage</a>
+      <a href="#dash-speed">Current Speed</a>
+      <a href="#dash-distance">Distance</a>
+      <a href="#dash-water">Watertank</a>
+      <a href="#dash-thermo">Thermometer</a>
+      <a href="#dash-oxygen">Oxygen Tank</a>
+      <a href="#dash-sleep">Sleep Cabine's</a>
+      <a href="#dash-toilet">Toilet tank</a>
+      <a href="#dash-food">Food Supply</a>
+      <a href="#dash-speedpast">Speed Chart</a>
     </nav>
 
     <main>
-      <div class="dash-progress">
+      <div class="dash-progress" id="dash-progress">
+        <h1>Progress</h1>
         <canvas id="progressChart"> </canvas>
-        
       </div>
-      <div class="dash-fuel">
-        <img src="media/Rocket.svg">
+      <div class="dash-fuel center-content" id="dash-fuel>
+        <h1 class="fullsize">Fuel</h1>
+        <img src="media/Rocket.svg" />
+        <div class="progress-bar">
+          <div id="toiletLabel" class="progress-label">42%</div>
+        </div>
       </div>
       <div class="flex-row">
-        <div class="dash-speed">
-          <h1> meter</h1>
+        <div class="dash-speed" id="dash-speed">
+          <h1>Speed</h1>
+          <canvas id="speedChart" height="1" width="1"></canvas>
         </div>
-        <div class="dash-distance">
-          <h1> staafdiagram</h1>
+        <div class="dash-distance" id="dash-distance">
+          <h1>Distance</h1>
+          <canvas id="distanceChart" height="1" width="1"></canvas>
         </div>
       </div>
-      <div class="dash-water">
-        <canvas id="waterChart" style="height:80%;"> </canvas>
+      <div class="dash-water" id="dash-water">
+        <h1>Water</h1>
+        <canvas id="waterChart" height="1.5" width="1"> </canvas>
       </div>
-      <div class="dash-thermo">
-        <h1>  Pie chart multiple layer</h1>
+      <div class="dash-thermo" id="dash-thermo">
+        <h1>Thermo</h1>
+        <canvas id="thermoChart"></canvas>
       </div>
-      <div class="dash-oxygen">
-        <h1> meter</h1>
+      <div class="dash-oxygen" id="dash-oxygen">
+        <h1>Oxygen</h1>
+        <canvas id="oxygenChart"></canvas>
       </div>
-      <div class="dash-sleep">
-        <h1> colour squares</h1>
+      <div class="dash-sleep" id="dash-sleep">
+        <h1>Sleep</h1>
+        <canvas id="sleepChart"></canvas>
       </div>
-      <div class="dash-toilet">
-        <h1> toilet tank</h1>
+      <div class="dash-toilet center-content" id="dash-toilet">
+        <h1>Toilet</h1>
+        <div class="progress-bar">
+          <div id="toiletLabel" class="progress-label">50%</div>
+        </div>
       </div>
-      <div class="dash-food">
-        <h1> food supply</h1>
+      <div class="dash-food" id="dash-food">
+        <h1>Food</h1>
+        <canvas id="foodChart" height="1" width="1"></canvas>
       </div>
-      <div class="dash-speedpast">
-        <h1> past speed line chart</h1>
+      <div class="dash-speedpast" id="dash-speedpast">
+        <h1>Speed passed</h1>
+        <canvas id="speedpastChart" height="1" width="2"></canvas>
       </div>
     </main>
-      <footer>
-        <h1> <a href="index.html">Click here to see the libraries I have used </a></h1>
-      </footer>
+    <footer>
+      <h1>
+        <a href="https://www.chartjs.org" target="_blank">Click here to see the primary library I have used </a>
+      </h1>
+    </footer>
     <script src="main.js"></script>
 
     <!--Charts Javascript-->
 
-    <!--progressChart-->
-    <script>
-      var progress = document.getElementById('progressChart').getContext('2d');
-      var myChart = new Chart(progress, {
-      type: 'line',
-      data: {
-          labels: ['1 ', '2', '3', '4', '5', '6','7'],
-          datasets: [{
-              label: 'Geplande afstand',
-              data: [57, 114, 171, 228, 285, 342, 400],
-              backgroundColor: [
-                  'rgba(102, 102, 102, 0.4)',
-                  'rgba(102, 102, 102, 0.4)',
-                  'rgba(102, 102, 102, 0.4)',
-                  'rgba(102, 102, 102, 0.4)',
-                  'rgba(102, 102, 102, 0.4)',
-                  'rgba(102, 102, 102, 0.4)'
-              ],
-              borderColor: [
-                  'rgba(204, 0, 0, 1)',
-                  'rgba(204, 0, 0, 1)',
-                  'rgba(204, 0, 0, 1)',
-                  'rgba(204, 0, 0, 1)',
-                  'rgba(204, 0, 0, 1)',
-                  'rgba(204, 0, 0, 1)'
-              ],
-              borderWidth: 1
-          },
-          {
-              label: 'Afgelegde afstand',
-              data: [ 50, 140, 170, 210, 300],
-              backgroundColor: [
-                  'rgba(102, 102, 102, 0.4)',
-                  'rgba(102, 102, 102, 0.4)',
-                  'rgba(102, 102, 102, 0.4)',
-                  'rgba(102, 102, 102, 0.4)',
-                  'rgba(102, 102, 102, 0.4)',
-                  'rgba(102, 102, 102, 0.4)'
-              ],
-              borderColor: [
-                  'rgba(204, 0, 0, 1)',
-                  'rgba(204, 0, 0, 1)',
-                  'rgba(204, 0, 0, 1)',
-                  'rgba(204, 0, 0, 1)',
-                  'rgba(204, 0, 0, 1)',
-                  'rgba(204, 0, 0, 1)'
-              ],
-              borderWidth: 1
-          }
-        ]
-          
-      },
-      options: {
-          scales: {
-              xAxes: [{
-                  scaleLabel: {
-                    display: true,
-                      labelString: 'Maand' }}],
-
-              yAxes: [{
-                  scaleLabel: {
-                    display: true,
-                      labelString: 'Miljoen' },                            
-                  ticks: {
-                      beginAtZero: true
-                  }
-              }]
-          }
-      }
-});
-  </script>
-<!-- end progressChart-->
-<script>
-
-
-
-var doughnutChart = document.getElementById("waterChart").getContext("2d");
-
-var data = {
-  datasets: [
-    {
-      data: [10, 20, 30],
-      backgroundColor: [
-                  'rgba(30, 139, 195, 1)',
-                  'rgba(30, 139, 195, 1)',
-                  'rgba(102, 102, 102, 0.4)'
-              ],
-    },
-  ],
-
-  // These labels appear in the legend and in the tooltips when hovering different arcs
-  labels: [
-        'Gebruikt',
-        'Beschikbaar',
-        'Reserve'
-    ]
-};
-
-var myPieChart = new Chart(doughnutChart, {
-  type: "pie",
-  data: data,
-});
-</script>
-
+    <!-- end progressChart-->
+    <script src="https://unpkg.com/chart.js@2.8.0/dist/Chart.bundle.js"></script>
+    <script src="https://unpkg.com/chartjs-gauge@0.2.0/dist/chartjs-gauge.js"></script>
+    <script type="text/javascript" src="charts.js"></script>
   </body>
 </html>

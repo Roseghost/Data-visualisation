@@ -1,65 +1,77 @@
-*{
+* {
   font-family: fontMonda;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
-@font-face{
+@font-face {
   font-family: fontMonda;
   src: url("media/Monda-Regular.ttf");
 }
-@font-face{
+@font-face {
   font-family: fontMonda;
   src: url("media/Monda-Bold.ttf");
-  font-weight:bold;
+  font-weight: bold;
 }
 
-body{
-  margin:0;
-  padding:0;
-  min-width:fit-content;
+body {
+  margin: 0;
+  padding: 0;
+  min-width: fit-content;
 }
 
 main {
-
-  display:flex;
+  display: flex;
   width: 100%;
 }
 
-footer{
-  display:flex;
-  background-color: #F8F9F9;
+footer {
+  display: flex;
+  background-color: #f8f9f9;
   width: 100%;
   margin-top: 5px;
   height: 5vh;
 }
 
-footer h1{
+footer h1 {
   margin: auto;
   color: black;
 }
 
-
-
-#progressChart, #waterChart{
-  width:100%;
-  height:100%;
+.chart-position {
+  margin: auto;
 }
 
-
-
-.chart-position{
-  margin:auto;
+.dash-fuel img {
+  height: 70%;
 }
 
-canvas{
-  display:flex !important;
-  width:100% !important;
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.dash-fuel img{
-  height:70%
-  
+.fullsize {
+  width: 100%;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #21bda3;
+}
+
+.progress-label {
+  height: 30px;
+  background-color: #27DEBF  ;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+}
+
+#toiletLabel {
+  width: 50%;
 }
