@@ -1,0 +1,31 @@
+*{
+    color:white;
+    text-align:center;
+    font-family: fontMonda;
+    font-size: 20px;
+
+}
+
+#location{
+    color: darkgrey;
+    margin-top: 15px;
+    width: 90%;
+    border-radius: 10px;
+    border-style: none;
+}
+
+
+@font-face {
+    font-family: fontMonda;
+    src: url("media/Monda-Regular.ttf");
+  }
+  @font-face {
+    font-family: fontMonda;
+    src: url("media/Monda-Bold.ttf");
+    font-weight: bold;
+  }
+
+
+.map, .weather, .hotel, .bar, .transit{
+    border-radius: 15px;
+}

@@ -1,0 +1,35 @@
+.map{
+    height: 400px; 
+    width: 80%;
+    background-color: teal;
+    margin: auto;
+    margin-top: 20px;
+}
+.weather{
+    height: 200px; 
+    width: 80%;
+    background-color: teal;
+    margin: auto;
+    margin-top: 20px;
+}
+.hotel{
+    height: 200px; 
+    width: 80%;
+    background-color: teal;
+    margin: auto;
+    margin-top: 20px;
+}
+.bar{
+    height: 200px; 
+    width: 80%;
+    background-color: teal;
+    margin: auto;
+    margin-top: 20px;
+}
+.transit{
+    height: 200px; 
+    width: 80%;
+    background-color: teal;
+    margin: auto;
+    margin-top: 20px;
+}
