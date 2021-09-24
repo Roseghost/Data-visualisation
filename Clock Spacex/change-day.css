@@ -1,0 +1,50 @@
+body {
+  transition: background-color ease-in 0.5s;
+}
+
+.dawn {
+  background-color: #5b415c;
+}
+
+.dawn .shooting_star {
+  display: none;
+}
+
+.midday .shooting_star {
+  display: none;
+}
+
+.dynamic {
+  transition: color ease-in 0.5s;
+}
+
+.dawn .dynamic {
+  background-color: #d6a1ab;
+  color: #67668f;
+}
+
+.midday {
+  background-color: #96c4ff;
+}
+
+.midday .dynamic {
+  background-color: #efd1f2;
+  color: #67668f;
+}
+
+.dusk {
+  background-color: #e4a268;
+}
+.dusk .dynamic {
+  background-color: #bf7175;
+  color: #efd1f2;
+}
+
+.midnight {
+  background-color: #67668f;
+}
+
+.midnight .dynamic {
+  background-color: #c1a2a7;
+  color: #5b415c;
+}

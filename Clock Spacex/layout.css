@@ -1,0 +1,142 @@
+/** Font Import **/ 
+@font-face {
+  font-family: fontMonda;
+  src: url("media/Monda-Regular.ttf");
+}
+
+/** Background **/
+
+html{
+  height: 100vh;
+}
+
+
+/** Mobile First **/
+
+
+
+body {
+  margin: 0;
+  background-color: black;
+  font-family: fontMonda;
+  color: grey;
+
+}
+
+button {
+  color: grey;
+}
+
+.container {
+  display: flex;
+  content: inherit;
+  flex-direction: column;
+  width: 80%;
+  flex-wrap: wrap;
+  margin: auto;
+  margin-top: 2%;
+}
+
+.current {
+  margin: 0px;
+  padding: 0px;
+}
+
+.current-zone {
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 3%;
+}
+
+.main-clock {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3%;
+}
+#main-clock {
+  width: 47%;
+  border-radius: 5px;
+  padding: 1%;
+  text-align: center;
+}
+
+.main-sundail {
+  text-transform: capitalize;
+}
+
+.options-zone {
+  margin-top: 2%;
+}
+
+.button-zone {
+  border-radius: 5px;
+  background-color: cornsilk;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 3%;
+  width: 100%;
+  border: none;
+}
+
+.button-zone:hover {
+  border: none;
+  background-color: darkgray  !important;
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    flex-direction: row;
+    width: 90%;
+  }
+
+  .current {
+    width: 68%;
+    margin-right: 2%;
+  }
+
+  .options-zone {
+    margin-top: 0;
+    width: 30%;
+  }
+
+  .button-zone {
+    margin-bottom: 6%;
+    height: 100px;
+  }
+
+  .main-clock{
+    font-size: 120%;
+  }
+  body{
+    background-image: url(media/pintetrees.svg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+    height: 90%;
+  }
+}
+
+@media only screen and (min-width: 800px){
+  
+  .current-zone{
+    font-size: 150%;
+  }
+  .main-clock{
+    font-size: 170%;
+  }
+
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+  .current-zone{
+    font-size: 175%;
+  }
+  .main-clock{
+    font-size: 250%;
+  }
+}

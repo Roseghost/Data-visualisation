@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpaceX Clock</title>
+    <meta description="clock for all the time zones on Mars" tags="clock, mars, SpaceX" />
+    <link rel="stylesheet" href="layout.css" />
+    <link rel="stylesheet" href="change-day.css" />
+    <link rel="stylesheet" href="fallen-stars.css" />
+    <script type="text/javascript" src="clock.js" defer></script>
+  </head>
+  <body class="midday dynamic">
+   
+  <!--- Falling stars-->
+    <div class="night">
+      <div class="shooting_star"></div>
+      <div class="shooting_star"></div>
+      <div class="shooting_star"></div>
+      <div class="shooting_star"></div>
+      <div class="shooting_star"></div>
+      <div class="shooting_star"></div>
+      <div class="shooting_star"></div>
+      <div class="shooting_star"></div>
+      <div class="shooting_star"></div>
+    </div>
+
+  <!--- Main-->
+    <div class="container">
+      <div class="current">
+        <div class="current-zone dynamic">
+          <h1 data-title>Title This Zone</h1>
+        </div>
+        <div class="main-clock">
+          <div class="main-time dynamic" id="main-clock">
+            <h1 data-time>T</h1>
+          </div>
+          <div class="main-sundail dynamic" id="main-clock">
+            <h1 data-period>T</h1>
+          </div>
+        </div>
+      </div>
+      <div class="options-zone">
+        <button class="button-zone dynamic" onclick="changeTimezone('America/Fortaleza')">
+          <h1>Fortaleza</h1>
+        </button>
+        <button class="button-zone dynamic" onclick="changeTimezone('America/Adak')">
+          <h1>Adak</h1>
+        </button>
+        <button class="button-zone dynamic" onclick="changeTimezone('Asia/Seoul')">
+          <h1>Seoul</h1>
+        </button>
+        <button class="button-zone dynamic" onclick="changeTimezone('Europe/Kirov')">
+          <h1>Kirov</h1>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
